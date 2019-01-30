@@ -118,8 +118,8 @@ class ModelingStage:
 
         Returns:
             model_dicts (dict): Dictionary with best accuracy per medel as key, and the model as value
-            cross_val_results (pd.Dataframe):
-            best_model (Sklearn.Model):
+            cross_val_results (pd.Dataframe): Results of each run of validation
+            best_model (Sklearn.Model): model object with best model
 
         """
         with warnings.catch_warnings():
@@ -158,9 +158,9 @@ class ModelingStage:
         scoring(String):  Metric to be used
 
         Returns:
-         model_dicts (dict): Dictionary with best accuracy per medel as key, and the model as value
-         cross_val_results (pd.Dataframe):
-         best_model (Sklearn.Model):
+        model_dicts (dict): Dictionary with best accuracy per medel as key, and the model as value
+        cross_val_results (pd.Dataframe): Results of each run of validation
+        best_model (Sklearn.Model): model object with best model
 
         """
         def score_best_param_per_model(rf, grid, model_type, scoring):
